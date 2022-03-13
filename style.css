@@ -34,6 +34,7 @@ input {
 .hex:hover,
 .hex:focus {
   z-index: 2;
+  cursor: pointer;
 }
 
 .hex .top {
