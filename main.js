@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
 });
 
 function calculate() {
-  const result = [[1]];
+  const result = [[1n]];
   const numRows = parseInt(numRowsInput.value || '5', 10);
   triangle.innerHTML = null;
   for (let i = 1; i < numRows; i++) {
@@ -17,7 +17,7 @@ function calculate() {
     const newRow = [];
     for (let j = 0; j <= prevRow.length; j++) {
       if (j === 0 || j === prevRow.length) {
-        newRow.push(1);
+        newRow.push(1n);
         continue;
       }
       const sum = prevRow[j] + prevRow[j - 1];
@@ -45,11 +45,19 @@ function buildHex(val) {
   const content = document.createElement('div');
   content.classList.add('content');
   content.textContent = val;
+
+  const tooltip = document.createElement('div');
+  tooltip.classList.add('tooltip');
+  tooltip.textContent = val;
+
   const bottom = document.createElement('div');
   bottom.classList.add('bottom');
+
   hex.appendChild(top);
   hex.appendChild(content);
   hex.appendChild(bottom);
+  hex.appendChild(tooltip);
+
   return hex;
 }
 

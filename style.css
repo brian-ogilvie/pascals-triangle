@@ -27,12 +27,22 @@ input {
 
 .hex {
   width: 52px;
+  z-index: 1;
+  position: relative;
+}
+
+.hex:hover {
+  z-index: 2;
 }
 
 .hex .top {
   border-bottom: 15px solid lightgreen;
   border-left: 26px solid transparent;
   border-right: 26px solid transparent;
+}
+
+.hex:hover .top {
+  border-bottom-color: green;
 }
 
 .hex .content {
@@ -43,10 +53,36 @@ input {
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  overflow: hidden;
+}
+
+.hex:hover .content {
+  background-color: green;
 }
 
 .hex .bottom {
   border-top: 15px solid lightgreen;
   border-left: 26px solid transparent;
   border-right: 26px solid transparent;
+}
+
+.hex:hover .bottom {
+  border-top-color: green;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  top: -24px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.hex:hover .tooltip {
+  visibility: visible;
 }
