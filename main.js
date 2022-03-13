@@ -49,7 +49,7 @@ function buildHex(val) {
 
   const tooltip = document.createElement('div');
   tooltip.classList.add('tooltip');
-  tooltip.textContent = val;
+  tooltip.textContent = val.toLocaleString();
 
   const bottom = document.createElement('div');
   bottom.classList.add('bottom');
