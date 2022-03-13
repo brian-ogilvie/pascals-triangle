@@ -31,7 +31,8 @@ input {
   position: relative;
 }
 
-.hex:hover {
+.hex:hover,
+.hex:focus {
   z-index: 2;
 }
 
@@ -41,7 +42,8 @@ input {
   border-right: 26px solid transparent;
 }
 
-.hex:hover .top {
+.hex:hover .top,
+.hex:focus .top {
   border-bottom-color: green;
 }
 
@@ -56,7 +58,8 @@ input {
   overflow: hidden;
 }
 
-.hex:hover .content {
+.hex:hover .content,
+.hex:focus .content {
   background-color: green;
 }
 
@@ -66,7 +69,8 @@ input {
   border-right: 26px solid transparent;
 }
 
-.hex:hover .bottom {
+.hex:hover .bottom,
+.hex:focus .bottom {
   border-top-color: green;
 }
 
@@ -83,6 +87,7 @@ input {
   border-radius: 5px;
 }
 
-.hex:hover .tooltip {
+.hex:hover .tooltip,
+.hex:focus .tooltip {
   visibility: visible;
 }

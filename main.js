@@ -40,6 +40,7 @@ function calculate() {
 function buildHex(val) {
   const hex = document.createElement('div');
   hex.classList.add('hex');
+  hex.tabIndex = '0';
   const top = document.createElement('div');
   top.classList.add('top');
   const content = document.createElement('div');
