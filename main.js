@@ -35,6 +35,8 @@ function calculate() {
     });
     triangle.appendChild(rowDiv);
   });
+
+  centerTriangle();
 }
 
 function buildHex(val) {
@@ -60,6 +62,13 @@ function buildHex(val) {
   hex.appendChild(tooltip);
 
   return hex;
+}
+
+function centerTriangle() {
+  const triangleWidth = triangle.offsetWidth;
+  const windowWidth = window.innerWidth;
+  const left = triangleWidth / 2 - windowWidth / 2;
+  window.scrollTo({ left, top: 0, behavior: 'smooth' });
 }
 
 button.addEventListener('click', calculate);
